@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <title>Auto Concessionaria</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+  <h1>Ricerca Auto Concessionario</h1>
+  <form id="autoForm">
+    <label>Marca:
+      <select name="marca">
+        <option value="">Tutte</option>
+        <option value="fiat">Fiat</option>
+        <option value="ford">Ford</option>
+        <option value="audi">Audi</option>
+      </select>
+    </label>
+    <label>Modello:
+      <input type="text" name="modello">
+    </label>
+    <label>Alimentazione:
+      <select name="alimentazione">
+        <option value="">Tutte</option>
+        <option value="diesel">Diesel</option>
+        <option value="benzina">Benzina</option>
+        <option value="ibrida">Ibrida</option>
+      </select>
+    </label>
+    <label>Colore:
+      <input type="text" name="colore">
+    </label>
+    <button type="submit">Cerca</button>
+  </form>
+
+  <div id="risultati"></div>
+
+  <script>
+    document.getElementById('autoForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const params = new URLSearchParams(new FormData(this)).toString();
+      fetch(`/filtra_auto?${params}`)
+        .then(res => res.json())
+        .then(data => {
+          const div = document.getElementById('risultati');
+          if (data.length === 0) {
+            div.innerHTML = '<p>Nessuna auto trovata.</p>';
+            return;
+          }
+          let html = '<table><tr><th>Marca</th><th>Modello</th><th>Alimentazione</th><th>Motore</th><th>Colore</th><th>Immagine</th></tr>';
+          data.forEach(auto => {
+            html += `<tr>
+              <td>${auto.marca}</td>
+              <td>${auto.modello}</td>
+              <td>${auto.alimentazione}</td>
+              <td>${auto.motore}</td>
+              <td>${auto.colore}</td>
+              <td><img src="${auto.immagine}" width="100"></td>
+            </tr>`;
+          });
+          html += '</table>';
+          div.innerHTML = html;
+        });
+    });
+  </script>
+</body>
+</html>

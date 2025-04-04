@@ -1,0 +1,59 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 30px;
+    background-color: #f4f4f4;
+  }
+  
+  form {
+    background: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    margin-bottom: 30px;
+    max-width: 600px;
+  }
+  
+  form label {
+    display: block;
+    margin-top: 10px;
+  }
+  
+  form input, form select {
+    width: 100%;
+    padding: 8px;
+    margin-top: 4px;
+    box-sizing: border-box;
+  }
+  
+  button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    border: none;
+    background-color: #007BFF;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  #risultati table {
+    border-collapse: collapse;
+    width: 100%;
+    background: white;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  }
+  
+  #risultati th, #risultati td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+  }
+  
+  #risultati th {
+    background-color: #007BFF;
+    color: white;
+  }
+  

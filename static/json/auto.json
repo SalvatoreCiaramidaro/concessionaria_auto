@@ -1,0 +1,138 @@
+[
+  {
+    "marca": "Fiat",
+    "modello": "500",
+    "alimentazione": "benzina",
+    "colore": "rosso",
+    "immagine": "/static/img/fiat500.jpg",
+    "motore": "1.2 Fire"
+  },
+  {
+    "marca": "Ford",
+    "modello": "Fiesta",
+    "alimentazione": "diesel",
+    "colore": "nero",
+    "immagine": "/static/img/fiesta.jpg",
+    "motore": "1.5 TDCi"
+  },
+  {
+    "marca": "Audi",
+    "modello": "A1",
+    "alimentazione": "benzina",
+    "colore": "bianco",
+    "immagine": "/static/img/audi_a1.jpg",
+    "motore": "1.0 TFSI"
+  },
+  {
+    "marca": "Volkswagen",
+    "modello": "Golf",
+    "alimentazione": "diesel",
+    "colore": "grigio",
+    "immagine": "/static/img/golf.jpg",
+    "motore": "2.0 TDI"
+  },
+  {
+    "marca": "Toyota",
+    "modello": "Yaris",
+    "alimentazione": "ibrida",
+    "colore": "blu",
+    "immagine": "/static/img/yaris.jpg",
+    "motore": "1.5 Hybrid"
+  },
+  {
+    "marca": "BMW",
+    "modello": "Serie 1",
+    "alimentazione": "benzina",
+    "colore": "nero",
+    "immagine": "/static/img/bmw_serie1.jpg",
+    "motore": "1.5 TwinPower Turbo"
+  },
+  {
+    "marca": "Mercedes-Benz",
+    "modello": "Classe A",
+    "alimentazione": "diesel",
+    "colore": "bianco",
+    "immagine": "/static/img/mercedes_classe_a.jpg",
+    "motore": "2.0 CDI"
+  },
+  {
+    "marca": "Peugeot",
+    "modello": "208",
+    "alimentazione": "benzina",
+    "colore": "rosso",
+    "immagine": "/static/img/peugeot_208.jpg",
+    "motore": "1.2 PureTech"
+  },
+  {
+    "marca": "Renault",
+    "modello": "Clio",
+    "alimentazione": "diesel",
+    "colore": "grigio",
+    "immagine": "/static/img/renault_clio.jpg",
+    "motore": "1.5 dCi"
+  },
+  {
+    "marca": "Nissan",
+    "modello": "Micra",
+    "alimentazione": "ibrida",
+    "colore": "verde",
+    "immagine": "/static/img/nissan_micra.jpg",
+    "motore": "1.0 e-Power"
+  },
+  {
+    "marca": "Kia",
+    "modello": "Rio",
+    "alimentazione": "benzina",
+    "colore": "blu",
+    "immagine": "/static/img/kia_rio.jpg",
+    "motore": "1.2 MPI"
+  },
+  {
+    "marca": "Hyundai",
+    "modello": "i20",
+    "alimentazione": "diesel",
+    "colore": "nero",
+    "immagine": "/static/img/hyundai_i20.jpg",
+    "motore": "1.6 CRDi"
+  },
+  {
+    "marca": "Skoda",
+    "modello": "Fabia",
+    "alimentazione": "benzina",
+    "colore": "bianco",
+    "immagine": "/static/img/skoda_fabia.jpg",
+    "motore": "1.0 TSI"
+  },
+  {
+    "marca": "Opel",
+    "modello": "Corsa",
+    "alimentazione": "diesel",
+    "colore": "rosso",
+    "immagine": "/static/img/opel_corsa.jpg",
+    "motore": "1.5 Diesel"
+  },
+  {
+    "marca": "Mazda",
+    "modello": "2",
+    "alimentazione": "ibrida",
+    "colore": "grigio",
+    "immagine": "/static/img/mazda_2.jpg",
+    "motore": "1.5 Skyactiv-G Hybrid"
+  },
+  {
+    "marca": "Subaru",
+    "modello": "Impreza",
+    "alimentazione": "benzina",
+    "colore": "verde",
+    "immagine": "/static/img/subaru_impreza.jpg",
+    "motore": "2.0 Boxer"
+  },
+  {
+    "marca": "Volvo",
+    "modello": "V40",
+    "alimentazione": "diesel",
+    "colore": "blu",
+    "immagine": "/static/img/volvo_v40.jpg",
+    "motore": "2.0 D3"
+  }
+]
