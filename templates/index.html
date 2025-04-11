@@ -9,15 +9,31 @@
   <h1>Ricerca Auto Concessionario</h1>
   <form id="autoForm">
     <label>Marca:
-      <select name="marca">
+      <select name="marca" id="selectMarca" onchange="aggiornaModelli()">
         <option value="">Tutte</option>
         <option value="fiat">Fiat</option>
         <option value="ford">Ford</option>
         <option value="audi">Audi</option>
+        <option value="volkswagen">Volkswagen</option>
+        <option value="toyota">Toyota</option>
+        <option value="bmw">BMW</option>
+        <option value="mercedes-benz">Mercedes-Benz</option>
+        <option value="peugeot">Peugeot</option>
+        <option value="renault">Renault</option>
+        <option value="nissan">Nissan</option>
+        <option value="kia">Kia</option>
+        <option value="hyundai">Hyundai</option>
+        <option value="skoda">Skoda</option>
+        <option value="opel">Opel</option>
+        <option value="mazda">Mazda</option>
+        <option value="subaru">Subaru</option>
+        <option value="volvo">Volvo</option>
       </select>
     </label>
     <label>Modello:
-      <input type="text" name="modello">
+      <select name="modello" id="selectModello">
+        <option value="">Tutti</option>
+      </select>
     </label>
     <label>Alimentazione:
       <select name="alimentazione">
@@ -28,7 +44,15 @@
       </select>
     </label>
     <label>Colore:
-      <input type="text" name="colore">
+      <select name="colore">
+        <option value="">Tutti</option>
+        <option value="rosso">Rosso</option>
+        <option value="blu">Blu</option>
+        <option value="nero">Nero</option>
+        <option value="bianco">Bianco</option>
+        <option value="grigio">Grigio</option>
+        <option value="verde">Verde</option>
+      </select>
     </label>
     <button type="submit">Cerca</button>
   </form>
@@ -36,6 +60,56 @@
   <div id="risultati"></div>
 
   <script>
+    // Mappatura dei modelli per marca
+    const modelliPerMarca = {
+      "": [""],
+      "fiat": ["500", "Grand Punto", "Panda"],
+      "ford": ["Fiesta", "Focus", "Kuga"],
+      "audi": ["A1", "A3", "A4"],
+      "volkswagen": ["Golf", "Polo", "Tiguan"],
+      "toyota": ["Yaris", "Corolla", "RAV4"],
+      "bmw": ["Serie 1", "Serie 3", "Serie 5"],
+      "mercedes-benz": ["Classe A", "Classe C"],
+      "peugeot": ["208", "308"],
+      "renault": ["Clio", "Megane"],
+      "nissan": ["Micra"],
+      "kia": ["Rio"],
+      "hyundai": ["i20"],
+      "skoda": ["Fabia"],
+      "opel": ["Corsa"],
+      "mazda": ["2"],
+      "subaru": ["Impreza"],
+      "volvo": ["V40"]
+    };
+    
+    // Funzione per aggiornare i modelli in base alla marca selezionata
+    function aggiornaModelli() {
+      const marcaSelezionata = document.getElementById('selectMarca').value;
+      const selectModello = document.getElementById('selectModello');
+      
+      // Rimuovi tutte le opzioni precedenti
+      selectModello.innerHTML = '';
+      
+      // Aggiungi l'opzione "Tutti"
+      const optionTutti = document.createElement('option');
+      optionTutti.value = "";
+      optionTutti.textContent = "Tutti";
+      selectModello.appendChild(optionTutti);
+      
+      // Aggiungi i modelli specifici per la marca selezionata
+      if (marcaSelezionata && modelliPerMarca[marcaSelezionata]) {
+        modelliPerMarca[marcaSelezionata].forEach(modello => {
+          const option = document.createElement('option');
+          option.value = modello.toLowerCase();
+          option.textContent = modello;
+          selectModello.appendChild(option);
+        });
+      }
+    }
+    
+    // Inizializza i modelli al caricamento della pagina
+    window.onload = aggiornaModelli;
+
     document.getElementById('autoForm').addEventListener('submit', function(e) {
       e.preventDefault();
       const params = new URLSearchParams(new FormData(this)).toString();

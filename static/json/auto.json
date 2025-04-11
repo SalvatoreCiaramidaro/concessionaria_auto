@@ -134,5 +134,125 @@
     "colore": "blu",
     "immagine": "/static/img/volvo_v40.jpg",
     "motore": "2.0 D3"
+  },
+  {
+    "marca": "Fiat",
+    "modello": "Grand Punto",
+    "alimentazione": "diesel",
+    "colore": "grigio",
+    "immagine": "/static/img/grand_punto.jpg",
+    "motore": "1.3 Multijet"
+  },
+  {
+    "marca": "Fiat",
+    "modello": "Panda",
+    "alimentazione": "benzina",
+    "colore": "verde",
+    "immagine": "/static/img/panda.jpg",
+    "motore": "1.2 Fire"
+  },
+  {
+    "marca": "Audi",
+    "modello": "A3",
+    "alimentazione": "diesel",
+    "colore": "nero",
+    "immagine": "/static/img/audi_a3.jpg",
+    "motore": "2.0 TDI"
+  },
+  {
+    "marca": "Audi",
+    "modello": "A4",
+    "alimentazione": "benzina",
+    "colore": "grigio",
+    "immagine": "/static/img/audi_a4.jpg",
+    "motore": "2.0 TFSI"
+  },
+  {
+    "marca": "BMW",
+    "modello": "Serie 3",
+    "alimentazione": "diesel",
+    "colore": "blu",
+    "immagine": "/static/img/bmw_serie3.jpg",
+    "motore": "2.0d"
+  },
+  {
+    "marca": "BMW",
+    "modello": "Serie 5",
+    "alimentazione": "ibrida",
+    "colore": "bianco",
+    "immagine": "/static/img/bmw_serie5.jpg",
+    "motore": "2.0i Hybrid"
+  },
+  {
+    "marca": "Ford",
+    "modello": "Focus",
+    "alimentazione": "benzina",
+    "colore": "rosso",
+    "immagine": "/static/img/ford_focus.jpg",
+    "motore": "1.0 EcoBoost"
+  },
+  {
+    "marca": "Ford",
+    "modello": "Kuga",
+    "alimentazione": "ibrida",
+    "colore": "verde",
+    "immagine": "/static/img/ford_kuga.jpg",
+    "motore": "2.5 PHEV"
+  },
+  {
+    "marca": "Volkswagen",
+    "modello": "Polo",
+    "alimentazione": "benzina",
+    "colore": "grigio",
+    "immagine": "/static/img/polo.jpg",
+    "motore": "1.0 TSI"
+  },
+  {
+    "marca": "Volkswagen",
+    "modello": "Tiguan",
+    "alimentazione": "diesel",
+    "colore": "nero",
+    "immagine": "/static/img/tiguan.jpg",
+    "motore": "2.0 TDI"
+  },
+  {
+    "marca": "Toyota",
+    "modello": "Corolla",
+    "alimentazione": "ibrida",
+    "colore": "bianco",
+    "immagine": "/static/img/corolla.jpg",
+    "motore": "1.8 Hybrid"
+  },
+  {
+    "marca": "Toyota",
+    "modello": "RAV4",
+    "alimentazione": "ibrida",
+    "colore": "rosso",
+    "immagine": "/static/img/rav4.jpg",
+    "motore": "2.5 Hybrid"
+  },
+  {
+    "marca": "Mercedes-Benz",
+    "modello": "Classe C",
+    "alimentazione": "benzina",
+    "colore": "nero",
+    "immagine": "/static/img/mercedes_c.jpg",
+    "motore": "1.8 Turbo"
+  },
+  {
+    "marca": "Peugeot",
+    "modello": "308",
+    "alimentazione": "diesel",
+    "colore": "blu",
+    "immagine": "/static/img/peugeot_308.jpg",
+    "motore": "1.6 BlueHDi"
+  },
+  {
+    "marca": "Renault",
+    "modello": "Megane",
+    "alimentazione": "benzina",
+    "colore": "bianco",
+    "immagine": "/static/img/renault_megane.jpg",
+    "motore": "1.3 TCe"
   }
 ]
