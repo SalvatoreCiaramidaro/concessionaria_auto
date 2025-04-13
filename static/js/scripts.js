@@ -22,55 +22,115 @@ const modelliPerMarca = {
 
 // Funzione per aggiornare i modelli in base alla marca selezionata
 function aggiornaModelli() {
-const marcaSelezionata = document.getElementById('selectMarca').value;
-const selectModello = document.getElementById('selectModello');
+    const marcaSelezionata = document.getElementById('selectMarca').value;
+    const selectModello = document.getElementById('selectModello');
 
-// Rimuovi tutte le opzioni precedenti
-selectModello.innerHTML = '';
+    // Rimuovi tutte le opzioni precedenti
+    selectModello.innerHTML = '';
 
-// Aggiungi l'opzione "Tutti"
-const optionTutti = document.createElement('option');
-optionTutti.value = "";
-optionTutti.textContent = "Tutti";
-selectModello.appendChild(optionTutti);
+    // Aggiungi l'opzione "Tutti"
+    const optionTutti = document.createElement('option');
+    optionTutti.value = "";
+    optionTutti.textContent = "Tutti";
+    selectModello.appendChild(optionTutti);
 
-// Aggiungi i modelli specifici per la marca selezionata
-if (marcaSelezionata && modelliPerMarca[marcaSelezionata]) {
-    modelliPerMarca[marcaSelezionata].forEach(modello => {
-        const option = document.createElement('option');
-        option.value = modello.toLowerCase();
-        option.textContent = modello;
-        selectModello.appendChild(option);
-    });
+    // Aggiungi i modelli specifici per la marca selezionata
+    if (marcaSelezionata && modelliPerMarca[marcaSelezionata]) {
+        modelliPerMarca[marcaSelezionata].forEach(modello => {
+            const option = document.createElement('option');
+            option.value = modello.toLowerCase();
+            option.textContent = modello;
+            selectModello.appendChild(option);
+        });
+    }
 }
+
+// Funzione per mostrare l'indicatore di caricamento
+function mostraCaricamento() {
+    const div = document.getElementById('risultati');
+    div.innerHTML = '<div class="loading">Caricamento in corso...</div>';
 }
 
-// Inizializza i modelli al caricamento della pagina
-window.onload = aggiornaModelli;
-
-document.getElementById('autoForm').addEventListener('submit', function(e) {
-e.preventDefault();
-const params = new URLSearchParams(new FormData(this)).toString();
-fetch(`/filtra_auto?${params}`)
-    .then(res => res.json())
-    .then(data => {
-        const div = document.getElementById('risultati');
-        if (data.length === 0) {
-            div.innerHTML = '<p>Nessuna auto trovata.</p>';
-            return;
-        }
-        let html = '<table><tr><th>Marca</th><th>Modello</th><th>Alimentazione</th><th>Motore</th><th>Colore</th><th>Immagine</th></tr>';
-        data.forEach(auto => {
-            html += `<tr>
+// Funzione per creare la tabella delle auto
+function visualizzaTabella(data) {
+    const div = document.getElementById('risultati');
+    
+    if (data.length === 0) {
+        div.innerHTML = '<p>Nessuna auto trovata.</p>';
+        return;
+    }
+    
+    let html = `
+        <h2>Risultati: ${data.length} auto trovate</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Marca</th>
+                    <th>Modello</th>
+                    <th>Alimentazione</th>
+                    <th>Motore</th>
+                    <th>Colore</th>
+                    <th>Immagine</th>
+                </tr>
+            </thead>
+            <tbody>
+    `;
+    
+    data.forEach(auto => {
+        html += `
+            <tr>
                 <td>${auto.marca}</td>
                 <td>${auto.modello}</td>
-                <td>${auto.alimentazione}</td>
-                <td>${auto.motore}</td>
-                <td>${auto.colore}</td>
-                <td><img src="${auto.immagine}" width="100"></td>
+                <td>${auto.alimentazione || 'N/D'}</td>
+                <td>${auto.motore || 'N/D'}</td>
+                <td>${auto.colore || 'N/D'}</td>
+                <td>${auto.immagine ? `<img src="${auto.immagine}" width="100" alt="${auto.marca} ${auto.modello}">` : 'Nessuna immagine'}</td>
             </tr>`;
-        });
-        html += '</table>';
-        div.innerHTML = html;
     });
-});
+    
+    html += '</tbody></table>';
+    div.innerHTML = html;
+}
+
+// Funzione per caricare tutte le auto
+function caricaTutteAuto() {
+    mostraCaricamento();
+    fetch('/filtra_auto')
+        .then(res => res.json())
+        .then(data => {
+            visualizzaTabella(data);
+        })
+        .catch(error => {
+            console.error('Errore durante il caricamento delle auto:', error);
+            document.getElementById('risultati').innerHTML = '<p class="errore">Errore durante il caricamento delle auto.</p>';
+        });
+}
+
+// Inizializza al caricamento della pagina
+window.onload = function() {
+    // Inizializza i modelli
+    aggiornaModelli();
+    
+    // Carica tutte le auto
+    caricaTutteAuto();
+    
+    // Gestisci l'evento di submit del form
+    document.getElementById('autoForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        // Mostra l'indicatore di caricamento
+        mostraCaricamento();
+        
+        // Crea i parametri di query e invia la richiesta
+        const params = new URLSearchParams(new FormData(this)).toString();
+        fetch(`/filtra_auto?${params}`)
+            .then(res => res.json())
+            .then(data => {
+                visualizzaTabella(data);
+            })
+            .catch(error => {
+                console.error('Errore durante la ricerca:', error);
+                document.getElementById('risultati').innerHTML = '<p class="errore">Errore durante la ricerca.</p>';
+            });
+    });
+};
