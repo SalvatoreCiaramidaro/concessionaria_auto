@@ -1,5 +1,13 @@
 [
   {
+    "marca": "BMW",
+    "modello": "Serie 3",
+    "alimentazione": "diesel",
+    "colore": "blu",
+    "immagine": "/static/img/bmw_serie3.jpg",
+    "motore": "2.0d"
+  },
+  {
     "marca": "Fiat",
     "modello": "500",
     "alimentazione": "benzina",
@@ -8,20 +16,84 @@
     "motore": "1.2 Fire"
   },
   {
-    "marca": "Ford",
-    "modello": "Fiesta",
+    "marca": "Toyota",
+    "modello": "RAV4",
+    "alimentazione": "ibrida",
+    "colore": "rosso",
+    "immagine": "/static/img/rav4.jpg",
+    "motore": "2.5 Hybrid"
+  },
+  {
+    "marca": "Volkswagen",
+    "modello": "Polo",
+    "alimentazione": "benzina",
+    "colore": "grigio",
+    "immagine": "/static/img/polo.jpg",
+    "motore": "1.0 TSI"
+  },
+  {
+    "marca": "Peugeot",
+    "modello": "308",
     "alimentazione": "diesel",
-    "colore": "nero",
-    "immagine": "/static/img/fiesta.jpg",
-    "motore": "1.5 TDCi"
+    "colore": "blu",
+    "immagine": "/static/img/peugeot_308.jpg",
+    "motore": "1.6 BlueHDi"
+  },
+  {
+    "marca": "Mercedes-Benz",
+    "modello": "Classe A",
+    "alimentazione": "diesel",
+    "colore": "bianco",
+    "immagine": "/static/img/mercedes_classe_a.jpg",
+    "motore": "2.0 CDI"
   },
   {
     "marca": "Audi",
-    "modello": "A1",
+    "modello": "A3",
+    "alimentazione": "diesel",
+    "colore": "nero",
+    "immagine": "/static/img/audi_a3.jpg",
+    "motore": "2.0 TDI"
+  },
+  {
+    "marca": "Nissan",
+    "modello": "Micra",
+    "alimentazione": "ibrida",
+    "colore": "verde",
+    "immagine": "/static/img/nissan_micra.jpg",
+    "motore": "1.0 e-Power"
+  },
+  {
+    "marca": "Ford",
+    "modello": "Focus",
     "alimentazione": "benzina",
-    "colore": "bianco",
-    "immagine": "/static/img/audi_a1.jpg",
-    "motore": "1.0 TFSI"
+    "colore": "rosso",
+    "immagine": "/static/img/ford_focus.jpg",
+    "motore": "1.0 EcoBoost"
+  },
+  {
+    "marca": "Mazda",
+    "modello": "2",
+    "alimentazione": "ibrida",
+    "colore": "grigio",
+    "immagine": "/static/img/mazda_2.jpg",
+    "motore": "1.5 Skyactiv-G Hybrid"
+  },
+  {
+    "marca": "Hyundai",
+    "modello": "i20",
+    "alimentazione": "diesel",
+    "colore": "nero",
+    "immagine": "/static/img/hyundai_i20.jpg",
+    "motore": "1.6 CRDi"
+  },
+  {
+    "marca": "Fiat",
+    "modello": "Grande Punto",
+    "alimentazione": "diesel",
+    "colore": "grigio",
+    "immagine": "/static/img/grande_punto.jpg",
+    "motore": "1.3 Multijet"
   },
   {
     "marca": "Volkswagen",
@@ -32,6 +104,30 @@
     "motore": "2.0 TDI"
   },
   {
+    "marca": "BMW",
+    "modello": "Serie 5",
+    "alimentazione": "ibrida",
+    "colore": "bianco",
+    "immagine": "/static/img/bmw_serie5.jpg",
+    "motore": "2.0i Hybrid"
+  },
+  {
+    "marca": "Opel",
+    "modello": "Corsa",
+    "alimentazione": "diesel",
+    "colore": "rosso",
+    "immagine": "/static/img/opel_corsa.jpg",
+    "motore": "1.5 Diesel"
+  },
+  {
+    "marca": "Renault",
+    "modello": "Megane",
+    "alimentazione": "benzina",
+    "colore": "bianco",
+    "immagine": "/static/img/renault_megane.jpg",
+    "motore": "1.3 TCe"
+  },
+  {
     "marca": "Toyota",
     "modello": "Yaris",
     "alimentazione": "ibrida",
@@ -40,20 +136,92 @@
     "motore": "1.5 Hybrid"
   },
   {
+    "marca": "Audi",
+    "modello": "A1",
+    "alimentazione": "benzina",
+    "colore": "bianco",
+    "immagine": "/static/img/audi_a1.jpg",
+    "motore": "1.0 TFSI"
+  },
+  {
+    "marca": "Kia",
+    "modello": "Rio",
+    "alimentazione": "benzina",
+    "colore": "blu",
+    "immagine": "/static/img/kia_rio.jpg",
+    "motore": "1.2 MPI"
+  },
+  {
+    "marca": "Volkswagen",
+    "modello": "Tiguan",
+    "alimentazione": "diesel",
+    "colore": "nero",
+    "immagine": "/static/img/tiguan.jpg",
+    "motore": "2.0 TDI"
+  },
+  {
+    "marca": "Skoda",
+    "modello": "Fabia",
+    "alimentazione": "benzina",
+    "colore": "bianco",
+    "immagine": "/static/img/skoda_fabia.jpg",
+    "motore": "1.0 TSI"
+  },
+  {
+    "marca": "Ford",
+    "modello": "Fiesta",
+    "alimentazione": "diesel",
+    "colore": "nero",
+    "immagine": "/static/img/fiesta.jpg",
+    "motore": "1.5 TDCi"
+  },
+  {
+    "marca": "Subaru",
+    "modello": "Impreza",
+    "alimentazione": "benzina",
+    "colore": "blu",
+    "immagine": "/static/img/subaru_impreza.jpg",
+    "motore": "2.0 Boxer"
+  },
+  {
+    "marca": "Fiat",
+    "modello": "Panda",
+    "alimentazione": "benzina",
+    "colore": "verde",
+    "immagine": "/static/img/panda.jpg",
+    "motore": "1.2 Fire"
+  },
+  {
+    "marca": "Audi",
+    "modello": "A4",
+    "alimentazione": "benzina",
+    "colore": "grigio",
+    "immagine": "/static/img/audi_a4.jpg",
+    "motore": "2.0 TFSI"
+  },
+  {
+    "marca": "Toyota",
+    "modello": "Corolla",
+    "alimentazione": "ibrida",
+    "colore": "bianco",
+    "immagine": "/static/img/corolla.jpg",
+    "motore": "1.8 Hybrid"
+  },
+  {
+    "marca": "Mercedes-Benz",
+    "modello": "Classe C",
+    "alimentazione": "benzina",
+    "colore": "nero",
+    "immagine": "/static/img/mercedes_c.jpg",
+    "motore": "1.8 Turbo"
+  },
+  {
     "marca": "BMW",
     "modello": "Serie 1",
     "alimentazione": "benzina",
     "colore": "nero",
     "immagine": "/static/img/bmw_serie1.jpg",
     "motore": "1.5 TwinPower Turbo"
-  },
-  {
-    "marca": "Mercedes-Benz",
-    "modello": "Classe A",
-    "alimentazione": "diesel",
-    "colore": "bianco",
-    "immagine": "/static/img/mercedes_classe_a.jpg",
-    "motore": "2.0 CDI"
   },
   {
     "marca": "Peugeot",
@@ -72,126 +240,6 @@
     "motore": "1.5 dCi"
   },
   {
-    "marca": "Nissan",
-    "modello": "Micra",
-    "alimentazione": "ibrida",
-    "colore": "verde",
-    "immagine": "/static/img/nissan_micra.jpg",
-    "motore": "1.0 e-Power"
-  },
-  {
-    "marca": "Kia",
-    "modello": "Rio",
-    "alimentazione": "benzina",
-    "colore": "blu",
-    "immagine": "/static/img/kia_rio.jpg",
-    "motore": "1.2 MPI"
-  },
-  {
-    "marca": "Hyundai",
-    "modello": "i20",
-    "alimentazione": "diesel",
-    "colore": "nero",
-    "immagine": "/static/img/hyundai_i20.jpg",
-    "motore": "1.6 CRDi"
-  },
-  {
-    "marca": "Skoda",
-    "modello": "Fabia",
-    "alimentazione": "benzina",
-    "colore": "bianco",
-    "immagine": "/static/img/skoda_fabia.jpg",
-    "motore": "1.0 TSI"
-  },
-  {
-    "marca": "Opel",
-    "modello": "Corsa",
-    "alimentazione": "diesel",
-    "colore": "rosso",
-    "immagine": "/static/img/opel_corsa.jpg",
-    "motore": "1.5 Diesel"
-  },
-  {
-    "marca": "Mazda",
-    "modello": "2",
-    "alimentazione": "ibrida",
-    "colore": "grigio",
-    "immagine": "/static/img/mazda_2.jpg",
-    "motore": "1.5 Skyactiv-G Hybrid"
-  },
-  {
-    "marca": "Subaru",
-    "modello": "Impreza",
-    "alimentazione": "benzina",
-    "colore": "blu",
-    "immagine": "/static/img/subaru_impreza.jpg",
-    "motore": "2.0 Boxer"
-  },
-  {
-    "marca": "Volvo",
-    "modello": "V40",
-    "alimentazione": "diesel",
-    "colore": "blu",
-    "immagine": "/static/img/volvo_v40.jpg",
-    "motore": "2.0 D3"
-  },
-  {
-    "marca": "Fiat",
-    "modello": "Grand Punto",
-    "alimentazione": "diesel",
-    "colore": "grigio",
-    "immagine": "/static/img/grand_punto.jpg",
-    "motore": "1.3 Multijet"
-  },
-  {
-    "marca": "Fiat",
-    "modello": "Panda",
-    "alimentazione": "benzina",
-    "colore": "verde",
-    "immagine": "/static/img/panda.jpg",
-    "motore": "1.2 Fire"
-  },
-  {
-    "marca": "Audi",
-    "modello": "A3",
-    "alimentazione": "diesel",
-    "colore": "nero",
-    "immagine": "/static/img/audi_a3.jpg",
-    "motore": "2.0 TDI"
-  },
-  {
-    "marca": "Audi",
-    "modello": "A4",
-    "alimentazione": "benzina",
-    "colore": "grigio",
-    "immagine": "/static/img/audi_a4.jpg",
-    "motore": "2.0 TFSI"
-  },
-  {
-    "marca": "BMW",
-    "modello": "Serie 3",
-    "alimentazione": "diesel",
-    "colore": "blu",
-    "immagine": "/static/img/bmw_serie3.jpg",
-    "motore": "2.0d"
-  },
-  {
-    "marca": "BMW",
-    "modello": "Serie 5",
-    "alimentazione": "ibrida",
-    "colore": "bianco",
-    "immagine": "/static/img/bmw_serie5.jpg",
-    "motore": "2.0i Hybrid"
-  },
-  {
-    "marca": "Ford",
-    "modello": "Focus",
-    "alimentazione": "benzina",
-    "colore": "rosso",
-    "immagine": "/static/img/ford_focus.jpg",
-    "motore": "1.0 EcoBoost"
-  },
-  {
     "marca": "Ford",
     "modello": "Kuga",
     "alimentazione": "ibrida",
@@ -200,59 +248,12 @@
     "motore": "2.5 PHEV"
   },
   {
-    "marca": "Volkswagen",
-    "modello": "Polo",
-    "alimentazione": "benzina",
-    "colore": "grigio",
-    "immagine": "/static/img/polo.jpg",
-    "motore": "1.0 TSI"
-  },
-  {
-    "marca": "Volkswagen",
-    "modello": "Tiguan",
-    "alimentazione": "diesel",
-    "colore": "nero",
-    "immagine": "/static/img/tiguan.jpg",
-    "motore": "2.0 TDI"
-  },
-  {
-    "marca": "Toyota",
-    "modello": "Corolla",
-    "alimentazione": "ibrida",
-    "colore": "bianco",
-    "immagine": "/static/img/corolla.jpg",
-    "motore": "1.8 Hybrid"
-  },
-  {
-    "marca": "Toyota",
-    "modello": "RAV4",
-    "alimentazione": "ibrida",
-    "colore": "rosso",
-    "immagine": "/static/img/rav4.jpg",
-    "motore": "2.5 Hybrid"
-  },
-  {
-    "marca": "Mercedes-Benz",
-    "modello": "Classe C",
-    "alimentazione": "benzina",
-    "colore": "nero",
-    "immagine": "/static/img/mercedes_c.jpg",
-    "motore": "1.8 Turbo"
-  },
-  {
-    "marca": "Peugeot",
-    "modello": "308",
+    "marca": "Volvo",
+    "modello": "V40",
     "alimentazione": "diesel",
     "colore": "blu",
-    "immagine": "/static/img/peugeot_308.jpg",
-    "motore": "1.6 BlueHDi"
-  },
-  {
-    "marca": "Renault",
-    "modello": "Megane",
-    "alimentazione": "benzina",
-    "colore": "bianco",
-    "immagine": "/static/img/renault_megane.jpg",
-    "motore": "1.3 TCe"
+    "immagine": "/static/img/volvo_v40.jpg",
+    "motore": "2.0 D3"
   }
+  
 ]
